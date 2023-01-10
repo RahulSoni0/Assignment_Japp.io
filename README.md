@@ -1,3 +1,3 @@
 Sample App demostrating chart ui and SliderTooltip setup
 
-https://github.com/RahulSoni0/Assignment_Japp.io/commit/3ae6f58888cd804a6a64b45d09315f7ea308d4e4#diff-7b46f0c6c0ce1e58e6ab495e90ad63202e190213d58caec72f225e201a49ad4c
+release apk: https://github.com/RahulSoni0/Assignment_Japp.io/blob/3ae6f58888cd804a6a64b45d09315f7ea308d4e4/app/release/app-release.apk
