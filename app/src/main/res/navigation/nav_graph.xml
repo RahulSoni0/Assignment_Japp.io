@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Wallet"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.HomeFragment"
+        android:label="Home "
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.WalletFragment"
+        android:label="Rahul"
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_walletFragment_to_marketFragment2"
+            app:destination="@id/marketFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.MarketFragment"
+        android:label="Market"
+        tools:layout="@layout/fragment_market" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_walletFragment"
+            app:destination="@id/walletFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            />
+        <argument
+            android:name="username"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="example.com/login/{username}" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/termsAndConditionsFragment"
+        android:name="com.rahulsoni0.assignmentjappio.ui.TermsAndConditionsFragment"
+        android:label="Terms and Conditions"
+        tools:layout="@layout/fragment_terms_and_conditions" />
+    <action
+        android:id="@+id/action_global_termsAndConditionsFragment"
+        app:destination="@id/termsAndConditionsFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_top"
+
+        />
+</navigation>

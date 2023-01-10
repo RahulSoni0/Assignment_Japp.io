@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="8dp"
+    tools:context=".ui.MarketFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/PointValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="24"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"></com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PointValue"
+            android:src="@drawable/ic_baseline_blur_circular_24">
+
+        </ImageView>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivCircle"
+            android:layout_marginBottom="8dp"
+            android:background="@color/blue"
+            android:foregroundGravity="center">
+
+        </View>
+    </LinearLayout>
+</RelativeLayout>
